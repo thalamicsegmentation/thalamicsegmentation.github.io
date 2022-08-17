@@ -1,1 +1,0 @@
-# thalamicsegmentation.github.io
