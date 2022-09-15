@@ -10,7 +10,7 @@ Donate to remove the back-link (webthemez.com) in this web template
 @import url('animate.css');
 
 body {
-	font-family:brandon-grot-w01-light,brandon-grot-w05-light,sans-serif;
+	font-family:Josefin Sans,Josefin Sans,sans-serif;
 	font-size:14px;
 	font-weight:300;
 	line-height:1.6em;
@@ -26,7 +26,7 @@ a:active {
 }
 
 h1,h2, h3, h4, h5, h6 {
-	font-family:brandon-grot-w01-light,brandon-grot-w05-light,sans-serif;
+	font-family:Josefin Sans,Josefin Sans,sans-serif;
 	font-weight:700;
 	line-height:1.1em;
 	color:#333;
