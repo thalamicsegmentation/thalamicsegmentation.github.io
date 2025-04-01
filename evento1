@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Thalamic-Nuclei-Group-Website</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="" />
+<meta name="author" content="http://webthemez.com" />
+<!-- css -->
+<link href="css/bootstrap.min.css" rel="stylesheet" />
+<link href="css/fancybox/jquery.fancybox.css" rel="stylesheet">
+<link href="css/jcarousel.css" rel="stylesheet" />
+<link href="css/flexslider.css" rel="stylesheet" />
+<link href="css/style.css" rel="stylesheet" />
+ 
+<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+<div id="wrapper">
+	<!-- start header -->
+	<header>
+        <div class="navbar navbar-default navbar-static-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                 <!-- old  <a class="navbar-brand" href="index.html"><img src="img/logo.png"; style="max-width: 25%; alt="logo"/></a> -->
+			      
+                  <a class="navbar-brand" href="index.html"><img src="img/logo.png"; style="max-width: 50%; alt="logo"/> <!-- <img src="img/slides/1.JPG" style="max-width:40%;" />--> </a>
+				
+                </div>
+                <div class="navbar-collapse collapse ">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="index.html">Home</a></li> 
+						
+						<!--<li><a href="services.html">Services</a></li> -->
+                       <!-- <li><a href="events.html">Events</a></li> -->
+                        <li><a href="evento1.html">Events</a></li>
+                         <li><a href="studygroups.html">Study groups</a></li>
+			  <li><a href="about.html">About Us</a></li>
+                     <li><a href="youtube.html">Social Media</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+	</header>			    
+			    <br/>
+			    <br/>
+<!-- end header -->
+	<section id="inner-headline">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<h2 class="pageTitle">Events & Meetings</h2>
+			</div>
+		</div>
+	</div>
+	</section>
+	<section id="content">
+	
+	<div class="container">
+	<div class="row"> 
+
+
+		
+							<div class="col-md-12">
+								<div class="about-logo">
+									<h3>Upcoming Events: Save the date!</h3>
+									<div>
+									<img src="img/FotoEvento5.JPG" alt="test2" style="max-width:100%;">
+									<br/>
+										<!-- per spostare immagine piu centrata cambia valore hspace-->
+										 <div class="align-items-end" style="background:#f6f6f6;width:410px"> <p>Webinar link 30 October: <a href="https://eu02web.zoom-x.de/j/65573136022?pwd=MnRLeTNWck9sdnl1dVAxSkFCYXRVUT09"> https://eu02web.zoom-x.de/j/65573136022?pwd=MnRLeTNWck9sdnl1dVAxSkFCYXRVUT09 </a> </p> 
+							  			<p>Meeting ID: 655 7313 6022</p>
+										<p>Passcode: 537577</p>
+							     			<p>Webinar link 31 October: <a href="https://eu02web.zoom-x.de/j/68916244027?pwd=YmZaeUpQNWVFcXNJNDdyWmVoWXBxZz09"> https://eu02web.zoom-x.de/j/68916244027?pwd=YmZaeUpQNWVFcXNJNDdyWmVoWXBxZz09 </a> </p> 
+							  			<p>Meeting ID: 689 1624 4027</p>
+										<p>Passcode: 970582</p>
+										<p>More info:<a href="https://www.tuebingen.mpg.de/thalamus ">https://www.tuebingen.mpg.de/thalamus</a>
+										      <p>Contact <a href="mailto:thalamicsegmentation@gmail.com"> thalamicsegmentation@gmail.com</a>
+										</div>
+
+											      <br/>
+			    <br/>
+			    <br/>
+			    <br/>
+										
+<br>
+<!-- Roundtable <br>
+Palais <br>
+Room: 510 <br>
+In vivo thalamic nuclei segmentation has been challenging due to difficulties in the accurate and reliable identification of thalamic nuclei from standard T1 and T2-weighted MRI. Other contrasts, such as those based on diffusion and functional MRI, and functional or structural connectivity imaging have been proposed more recently. Nonetheless, such methods generally suffer from suboptimal spatial resolutions, spatial distortions and only allow parcellation of the thalamus into a limited number of large thalamic regions, rather than individual nuclei corresponding to histological definitions, such as provided by the Morel histological atlas. As a result, many researchers still routinely treat the thalamus as a single structure, reducing their sensitivity to detect disease or age-related changes.
+Recent developments, using for example ultra-high field MRI and/or by leveraging newer contrast mechanisms, as well as segmentation methods based on multi-atlas, Bayesian, and deep learning have significantly improved the accuracy of thalamic nuclei imaging. Such developments can have enormous implications for studying the role of the thalamus in both basic and cognitive neuroscience and in the context of many pathologies such as multiple sclerosis, Alzheimer’s disease, and alcohol use disorder where specific nuclei are impacted, as well as to personalize deep brain stimulation targets in movement disorders and epilepsy.
+This roundtable will provide a platform to discuss the past, present, and future of thalamic nuclei MR imaging and to bring together researchers with expertise ranging from MRI physics, biomedical engineering, neuroscience, and neurology to guide and maximize the success of such endeavors.<br>
+<br>
+<b>Objective:</b>  This roundtable will provide the audience with: <br>
+1. A better understanding of the state-of-the-art on MRI sequences for both standard and ultra-high magnetic field strengths, tailored to improve thalamic nuclei visualization and segmentation. <br>
+2. A review of the strengths and limitations of existing segmentation schemes as well as an introduction to recently proposed, cutting-edge methods. <br>
+3. A better appreciation of the need to coordinate such methodological efforts to improve thalamic nuclei imaging in health and disease. <br>
+<br>
+			  
+<b>Target Audience: </b>Basic, cognitive, and clinical neuroscientist (covering varying levels of expertise and backgrounds) that are working with thalamic MRI data. In addition, clinicians (e.g., neurologists, neurosurgeons, and neuroradiologists) that are directly involved in the care of patients, that would benefit from improved MR imaging and segmentation of thalamic nuclei. 
+<h4>Presentations</h4>
+<b>Objective:</b>  Thalamic nuclei imaging and segmentation: a neuroimaging perspective <br>
+In this presentation, I will go over MRI protocol considerations for optimal thalamic nuclei visualization and segmentation, covering new contrast mechanisms as well as discuss the role of ultra-high field imaging (7T and higher) and translating some of those to more clinically accessible field strengths (1.5 and 3T). I will then give an overview of current state-of-the-art thalamic nuclei segmentation schemes discussing the pros and cons of each method and optimal use case scenarios. I will also briefly cover emerging methods which employ multi-contrast imaging and deep learning. 
+<br>
+Presenter: Manojkumar Saranathan, University of Arizona Tucson, AZ, United States
+<br>
+<br>
+<b>Objective:</b>  Thalamic nuclei imaging and segmentation: a clinical perspective <br>
+The thalamus is an important target for neuromodulatory treatment and current targets include ventral intermediate (VIM) nucleus for tremor, anterior (ANT), centromedian (CM), and pulvinar nuclei for epilepsy, and the ventral posterolateral/posteromedial nucleus for neuropathic pain. As a neurosurgeon and clinical neuroscientist, I see opportunities to further optimize and personalize deep brain stimulation therapy from both targeting and post-operative programming perspectives by developing and using tailored imaging sequences and segmentation method. In my presentation, I will introduce the importance of thalamic imaging and segmentation methods to benefit patient care in terms of diagnosis as well as treatment. <br>
+Presenter: Jonathan Lau, Schulich School of Medicine and Dentistry, University of Western Ontario London, Ontario, Canada
+<br>
+<br>
+<b>Objective:</b>  Thalamic nuclei imaging and segmentation: a cognitive perspective <br>
+The thalamus plays an important role in whole brain functioning and dynamics and there is first evidence that its tiny and tightly-packed nuclei are involved in a diverse set of cognitive functions. In my research I am particularly interested in the role of the auditory (medial geniculate nucleus) and visual (lateral geniculate nucleus) thalamus in speech recognition. Both nuclei are not only themselves relatively small and buried deep inside the brain, but they also contain subsections that differ in structure and function. This makes understanding their contribution to cognition in humans in-vivo challenging. In my talk and in the discussion, I will highlight the importance of accurate thalamic nuclei imaging and segmentation in the field of cognitive neuroscience. I will explain how using optimized functional and anatomical MRI (such as quantitative T1) benefits our understanding of how distinct thalamic nuclei and their subsections contribute to cognition.  
+<br>
+Presenter: Katharina von Kriegstein, Technische Universität Dresden Dresden, NA, Germany
+<br> -->
+
+
+
+ </p>
+
+									</div>
+								</div> 
+							</div>
+			</div>
+
+	<section id="content">
+	
+	<div class="container">
+	<div class="row"> 
+							<div class="col-md-12">
+								<div class="about-logo">
+									<h3>Past events & webinars</h3>
+<p> 30th-31st October 2023, Conference: <a  href="eventoTubingen.html"> Thalamus Anatomy and Connectomics Conference: A two-days hybrid conference with talks and discussions </a>  </p>
+
+<p> Virtual event, 25th July 2023, OHBM 2023 Roundtable: <a  href="roundtableOHBM.html"> In vivo thalamic nuclei imaging, segmentation, and applications: pitfalls and perspectives </a>  </p>
+
+<p> Virtual event, 15th March 2023, Anneke Alkemade (University of Amsterdam): <a  href="EventoAnneke.html"> Anatomical mapping to study human subcortical function </a>  </p>
+			  
+<p> Virtual event, 18th January 2023, João Jorge (Swiss Center for Electronics and Microtechnology): <a  href="EventoJorge.html"> A quest for contrast: towards non-invasive high-resolution thalamic nuclei differentiation with multi-contrast 7T MRI </a>  </p>
+
+<p> Virtual event, 30th November 2022, Katharina von Kriegstein (Technische Universität Dresden): <a  href="EventoKatharina.html"> The tiny and the fast: The role of sensory thalamus in speech recognition </a>  </p>
+
+<p> Virtual event, 28th September 2022, Mac Shine (University of Sidney): <a  href="EventoMac.html">The systems-level impact of the human thalamus – evidence from multi-modal neuroimaging </a>  </p>
+
+									<p> Virtual event, 19-21 January 2022: <a  href="https://anagrammarian.wixsite.com/thalamicseg">E-symposium: Thalamic nuclei imaging, segmentation
+and applications </a>  </p>
+
+								</div> 
+							</div>
+			</div>
+
+ 
+	</section>
+	</section>
+		<footer>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-3">
+				<div class="widget">
+					<h4 class="widgetheading">Our Contact</h4>
+					<!-- <address>
+					<strong>Target company Inc</strong><br>
+					JC Main Road, Near Silnile tower<br>
+					 Pin-21542 NewYork US.</address>
+					<p>
+						<i class="icon-phone"></i> (123) 456-789 - 1255-12584 <br> -->
+						<i class="icon-envelope-alt"></i> <a href="mailto:thalamicsegmentation@gmail.com"> thalamicsegmentation@gmail.com </a>
+					</p>
+				</div>
+			</div>
+			<div class="col-lg-3">
+				<div class="widget">
+					<h4 class="widgetheading">Quick Links</h4>
+					<ul class="link-list">
+						<li><a href="evento1.html">Upcoming Events</a></li>
+						<!-- <li><a href="#">Terms and conditions</a></li> -->
+						<!-- <li><a href="#">Privacy policy</a></li> -->
+						<!-- <li><a href="#">Career</a></li> -->
+						<li><a href="contact.html">Contact us</a></li>
+					</ul> 
+				</div>
+			</div>
+			<!--<div class="col-lg-3">
+				<div class="widget">
+					<h5 class="widgetheading">Latest posts</h5>
+					 <ul class="link-list">
+						<li><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
+						<li><a href="#">Pellentesque et pulvinar enim. Quisque at tempor ligula</a></li>
+						<li><a href="#">Natus error sit voluptatem accusantium doloremque</a></li>
+					</ul> 
+				</div>
+			</div>-->
+			<!--<div class="col-lg-3">
+				<div class="widget">
+					<h5 class="widgetheading">Recent News</h5>
+					 <ul class="link-list">
+						<li><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
+						<li><a href="#">Pellentesque et pulvinar enim. Quisque at tempor ligula</a></li>
+						<li><a href="#">Natus error sit voluptatem accusantium doloremque</a></li>
+					</ul> -->
+			<div class="col-lg-3">
+				<div class="widget">
+					<h4 class="widgetheading">Our social networks</h4>
+                         			<ul class="social-network">
+						<li><a href="https://www.youtube.com/channel/UCnLKTymXVesvsr4_F5-SH1Q" data-placement="top" title="Youtube"><i class="fa fa-youtube"></i></a></li>
+						<li><a href="https://twitter.com/ThalamicS" data-placement="top" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+					<!--	<li><a href="#" data-placement="top" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+						<li><a href="#" data-placement="top" title="Pinterest"><i class="fa fa-pinterest"></i></a></li>
+						<li><a href="#" data-placement="top" title="Google plus"><i class="fa fa-google-plus"></i></a></li>-->
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="sub-footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6">
+					<div class="copyright">
+						<p>
+							<!-- <span>&copy; Target 2014 All right reserved. By </span><a href="http://webthemez.com" target="_blank">WebThemez</a> -->
+						</p>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<ul class="social-network">
+						<li><a href="https://www.youtube.com/channel/UCnLKTymXVesvsr4_F5-SH1Q" data-placement="top" title="Youtube"><i class="fa fa-youtube"></i></a></li>
+						<li><a href="https://twitter.com/ThalamicS" data-placement="top" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+					<!--	<li><a href="#" data-placement="top" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+						<li><a href="#" data-placement="top" title="Pinterest"><i class="fa fa-pinterest"></i></a></li>
+						<li><a href="#" data-placement="top" title="Google plus"><i class="fa fa-google-plus"></i></a></li>-->
+					</ul>
+				</div>
+			</div>
+		</div>
+	</footer>
+</div>
+<a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
+<!-- javascript
+    ================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="js/jquery.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.fancybox.pack.js"></script>
+<script src="js/jquery.fancybox-media.js"></script> 
+<script src="js/portfolio/jquery.quicksand.js"></script>
+<script src="js/portfolio/setting.js"></script>
+<script src="js/jquery.flexslider.js"></script>
+<script src="js/animate.js"></script>
+<script src="js/custom.js"></script>
+<script src="js/validate.js"></script>
+</body>
+</html>
