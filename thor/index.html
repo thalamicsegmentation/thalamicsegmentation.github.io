@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>THOR: Thalamic Hub for Open-data Reuse</title>
+
+<link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+
+<style>
+
+body {
+  font-family: system-ui, sans-serif;
+  background: #fafafa;
+  color: #222;
+  margin: auto;
+  padding: 2em;
+  max-width: 1800px;
+}
+
+h1 {
+  margin-bottom: 0.2em;
+}
+
+p {
+  color: #555;
+  margin-bottom: 1.5em;
+}
+
+table.dataTable thead th {
+  background-color: #f2f2f2;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+tfoot input,
+tfoot select {
+  width: 100%;
+  padding: 4px;
+  box-sizing: border-box;
+  font-size: 0.9em;
+}
+
+/* Access burden circles */
+
+.badge-easy,
+.badge-medium,
+.badge-hard {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* 1 = Easy */
+.badge-easy {
+  background-color: #e0e1dd;
+  border: 1px solid #c7c9c5;
+}
+
+/* 2 = Moderate */
+.badge-medium {
+  background-color: #415a77;
+}
+
+/* 3 = Complex */
+.badge-hard {
+  background-color: #0d1b2a;
+}
+
+/* Links */
+
+a {
+  text-decoration: none;
+  color: #1d4e89;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+</style>
+</head>
+
+<body>
+
+<div style="max-width: 1000px; margin: 0 auto; padding: 20px; font-family: Arial, sans-serif; line-height: 1.7; color: #333;">
+
+    <h1 style="color: #2c3e50; margin-bottom: 10px;">
+        THOR: Thalamic Hub for Open-data Reuse
+    </h1>
+
+    <p style="font-size: 1.1em; color: #555;">
+        An interactive resource of publicly available whole-brain MRI datasets
+        potentially suitable for <strong>thalamic nuclei research</strong>.
+    </p>
+
+    <p>
+        <strong>THOR</strong> summarizes key information across open neuroimaging datasets,
+        including links to repositories and reference papers, number of subjects,
+        available MRI contrasts, spatial resolution of the main T1-weighted structural imaging,
+        and cohort characteristics.
+    </p>
+
+    <p>
+        This resource is intended as a <strong>practical starting point for dataset selection</strong>,
+        helping researchers make informed decisions based on the anatomical and methodological
+        requirements of thalamic investigations.
+    </p>
+
+    <!-- Important notice box -->
+    <div style="
+        background-color: #f8f9fa;
+        border-left: 5px solid #e67e22;
+        padding: 15px 20px;
+        margin: 25px 0;
+        border-radius: 5px;
+    ">
+        <h3 style="margin-top: 0; color: #d35400;">
+            Important Notes
+        </h3>
+
+        <ol style="padding-left: 20px; margin-bottom: 10px;">
+            <li>
+                Inclusion of a dataset in this table does <strong>not imply suitability</strong>
+                for all research questions or all thalamic nuclei.
+            </li>
+            <li>
+                Help us keep this resource up to date. If you would like to suggest
+                an additional dataset, please contact us at:
+                <br>
+                <strong>thalamicsegmentation (AT) gmail (DOT) com</strong>
+            </li>
+        </ol>
+    </div>
+
+    <!-- Citation box -->
+    <div style="
+        background-color: #eef5ff;
+        padding: 15px 20px;
+        border-radius: 5px;
+        border: 1px solid #d6e4f0;
+        margin-bottom: 25px;
+    ">
+        <strong>If you use THOR in scientific work, please cite:</strong>
+
+        <p style="margin-top: 10px; margin-bottom: 0;">
+            <em>
+                The challenges of open neuroimaging data reuse – Insights from
+                Mapping the Human Thalamus
+            </em>,
+            M. Bach Cuadra, R. Haast, A. Lella et al., bioRxiv.
+        </p>
+    </div>
+
+</div>
+
+<p style="font-size: 1.05rem; color: #4b5563; margin-top: -0.3rem; margin-bottom: 1.5rem;">
+  <strong>Currently indexing</strong> 42 datasets.
+  <span style="font-style: italic; color: #6b7280;">
+    Last updated: May 2026
+  </span>
+</p>
+
+  
+<table id="mriTable" class="display nowrap">
+  <thead></thead>
+  <tfoot></tfoot>
+</table>
+
+<script>
+
+Papa.parse("tableTHOR_hyperlinks.csv", {
+
+  download: true,
+  header: true,
+  skipEmptyLines: true,
+
+  complete: function(results) {
+
+    console.log("META FIELDS:", results.meta.fields);
+    console.log("FIRST ROW:", results.data[0]);
+
+    // Remove empty rows
+    let data = results.data.filter(row =>
+      Object.values(row).some(
+        value => value !== null &&
+                 value !== undefined &&
+                 String(value).trim() !== ""
+      )
+    );
+
+    // Normalize all keys
+    data = data.map(row => {
+      const newRow = {};
+      Object.keys(row).forEach(k => {
+        newRow[k.trim()] = row[k];
+      });
+      return newRow;
+    });
+
+    // Use cleaned headers
+    let headers = results.meta.fields.map(h => h.trim());
+
+    let columns = headers.map(col => ({
+      title: col,
+      data: col
+    }));
+
+    // Build header
+    $('#mriTable thead').html(
+      '<tr>' +
+      columns.map(c => `<th>${c.title}</th>`).join('') +
+      '</tr>'
+    );
+
+    // Build footer filters
+    $('#mriTable tfoot').html(
+      '<tr>' +
+      columns.map(() => `<th></th>`).join('') +
+      '</tr>'
+    );
+
+    // Detect Access column
+    let accessColIndex = columns.findIndex(c =>
+      c.title.toLowerCase().includes("access")
+    );
+
+    // Initialize table
+    let table = $('#mriTable').DataTable({
+
+      data: data,
+
+      columns: columns,
+
+      scrollCollapse: true,
+      autoWidth: true,
+
+      deferRender: true,
+      processing: true,
+
+      paging: true,
+      pageLength: 50,
+
+      order: [[0, 'asc']],
+
+      columnDefs: [{
+
+        targets: "_all",
+
+        render: function(data, type, row, meta) {
+
+          if (type !== 'display')
+            return data;
+
+          if (data === null || data === undefined)
+            return "";
+
+          // Preserve HTML links
+          if (typeof data === "string" && data.includes("<a "))
+            return data;
+
+          // Access circles
+          if (meta.col === accessColIndex) {
+
+            let val = String(data).trim();
+            val = val.replace(".0", "");
+
+            if (val === "1")
+              return '<span class="badge-easy"></span>';
+
+            if (val === "2")
+              return '<span class="badge-medium"></span>';
+
+            if (val === "3")
+              return '<span class="badge-hard"></span>';
+          }
+
+          return data;
+        }
+
+      }]
+
+    });
+
+    table.columns.adjust().draw();
+
+    // Footer filters
+    $('#mriTable tfoot th').each(function(i) {
+
+      let colName = columns[i].title.toLowerCase();
+
+      if (colName.includes("access")) {
+
+        $(this).html(`
+          <select>
+            <option value="">All</option>
+            <option value="1">Easy</option>
+            <option value="2">Moderate</option>
+            <option value="3">Complex</option>
+          </select>
+        `);
+
+      } else {
+
+        $(this).html(
+          '<input type="text" placeholder="Search" />'
+        );
+
+      }
+
+    });
+
+    // Activate filters
+    table.columns().every(function() {
+
+      let column = this;
+
+      $('input, select', this.footer()).on(
+        'keyup change',
+        function() {
+          column.search(this.value).draw();
+        }
+      );
+
+    });
+
+  }
+
+});
+
+</script>
+
+</body>
+</html>
